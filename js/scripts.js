@@ -7,13 +7,6 @@ function Player(name) {
 }
 
 
-// Player.prototype.addPlayer(name, score) {
-//   this.playerName = name;
-//   this.score = score;
-// };
-
-
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -38,6 +31,8 @@ function startGame () {
   clearFields();
   let name1 = document.getElementById("name1").value;
   let name2 = document.getElementById("name2").value;
+  document.getElementById("player1").innerText = name1;
+  document.getElementById("player2").innerText = name2;
   let score1 = 0;
   let score2 = 0;
   let player1 = new Player(name1, score1);
@@ -112,11 +107,11 @@ function player2Pass() {
   let player2 = playersList[1];
   clearFields();
   player2.score += player2.currentScore;
-  document.getElementById("result2").innerText = "Your score is " + player2.score + ". It is Player's 1 turn.";
+  document.getElementById("result2").innerText = "Your score is " + player2.score + ". It is " + player1.playerName + "'s turn.";
 }
 
 
-
+//User Interface Logic
 
 window.addEventListener("load", function () {
   document.getElementById("submit").addEventListener("click", startGame);

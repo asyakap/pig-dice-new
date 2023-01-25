@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <title>Pig Dice</title>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
 </head>
+
 <body>
   <h2>Pig Dice</h2>
   <form id="button">
@@ -16,30 +18,47 @@
         <label for="name2">Enter Player's 2 name:</label>
         <input id="name2" type="string">
         <br>
-        <input type="button" id = "submit" value = "Start playing">
         <br>
-        <br>
-        <input type="button" id = "roll1" value = "Roll a dice">
-        <input type="button" id = "pass1" value = "Pass">
-        <br>
-        <br>
-
-        <input type="button" id = "roll2" value = "Roll a dice">
-        <input type="button" id = "pass2" value = "Pass">
+        <input type="button" id="submit" value="Start playing">
         <br>
         <br>
       </form>
-      <br>
-      
-      <p><span id="rolledScore"></span></p>
-      <p><span id="score1"></span></p>
-      <p><span id="totalScore1"></span></p>
-      <p><span id="result1"></span></p>
-      <p><span id="score2"></span></p>
-      <p><span id="totalScore2"></span></p>
-      <p><span id="result2"></span></p>
+
+      <div class="left">
+        <h3 id="player1"></h3>
+        <br>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+        <br>
+        <input type="button" id="roll1" value="Roll a dice">
+        <input type="button" id="pass1" value="Pass">
+        <br>
+        <br>
+        <p><span id="rolledScore"></span></p>
+        <p><span id="score1"></span></p>
+        <p><span id="totalScore1"></span></p>
+        <p><span id="result1"></span></p>
+      </div>
+
+
+      <div class="right">
+        <h3 id="player2"></h3>
+        <br>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+        <br>
+        <input type="button" id="roll2" value="Roll a dice">
+        <input type="button" id="pass2" value="Pass">
+        <br>
+        <br>
+        <p><span id="rolledScore"></span></p>
+        <p><span id="score2"></span></p>
+        <p><span id="totalScore2"></span></p>
+        <p><span id="result2"></span></p>
+      </div>
+
+
       <p><span id="gameResults"></span></p>
 
-  </div>
+    </div>
 </body>
+
 </html>
