@@ -74,7 +74,7 @@ function player1Pass() {
   clearFields();
   player1.score += player1.currentScore;
   player1.currentScore = 0;
-  document.getElementById("result1").innerText = "Your score is " + player1.score + ". It is " + player2.playerName + "'s 2 turn.";
+  document.getElementById("result1").innerText = "Your score is " + player1.score + ". It is " + player2.playerName + "'s turn.";
 }
 
 function player2Roll() {

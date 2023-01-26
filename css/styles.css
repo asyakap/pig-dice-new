@@ -23,6 +23,10 @@ h2 {
   padding: 20px;
 }
 
+h1 {
+  color: red; 
+}
+
 .left {
   text-align: center;
   padding: 10px;
