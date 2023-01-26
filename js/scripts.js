@@ -17,7 +17,8 @@ let playersList = [];
 
 function clearFields () {
   document.getElementById("result1").innerText = "";
-  document.getElementById("rolledScore").innerText = "";
+  document.getElementById("rolledScore1").innerText = "";
+  document.getElementById("rolledScore2").innerText = "";
   document.getElementById("score1").innerText = "";
   document.getElementById("result2").innerText = "";
   document.getElementById("score2").innerText = "";
@@ -46,18 +47,16 @@ function player1Roll() {
   clearFields();
   let player1 = playersList[0];
   let player2 = playersList[1];
-  let rolledScore = getRandomInt(1, 7);
-  if (rolledScore === 1) {
+  let rolledScore1 = getRandomInt(1, 7);
+  if (rolledScore1 === 1) {
     player1.currentScore = 0;
-    document.getElementById("rolledScore").innerText = "You rolled " + rolledScore;
+    document.getElementById("rolledScore1").innerText = "You rolled " + rolledScore1;
     document.getElementById("result1").innerText = "Your score is 0. It is " + player2.playerName + "'s turn.";
     document.getElementById("totalScore1").innerText = "Your total score is " + player1.score;
   }
   else {
-    player1.currentScore = player1.currentScore + rolledScore;
-    document.getElementById("result1").innerText = "";
-    document.getElementById("rolledScore").innerText = "";
-    document.getElementById("rolledScore").innerText = "You rolled " + rolledScore;
+    player1.currentScore = player1.currentScore + rolledScore1;
+    document.getElementById("rolledScore1").innerText = "You rolled " + rolledScore1;
     document.getElementById("score1").innerText = "Your current score is " + player1.currentScore ;
     let tempScore1 = player1.score + player1.currentScore;
     document.getElementById("totalScore1").innerText = "Your total score is " + tempScore1;
@@ -74,6 +73,7 @@ function player1Pass() {
   let player2 = playersList[1];
   clearFields();
   player1.score += player1.currentScore;
+  player1.currentScore = 0;
   document.getElementById("result1").innerText = "Your score is " + player1.score + ". It is " + player2.playerName + "'s 2 turn.";
 }
 
@@ -81,16 +81,16 @@ function player2Roll() {
   clearFields();
   let player1 = playersList[0];
   let player2 = playersList[1];
-  let rolledScore = getRandomInt(1, 7);
-  if (rolledScore === 1) {
+  let rolledScore2 = getRandomInt(1, 7);
+  if (rolledScore2 === 1) {
     player2.currentScore = 0;
-    document.getElementById("rolledScore").innerText = "You rolled " + rolledScore;
+    document.getElementById("rolledScore2").innerText = "You rolled " + rolledScore2;
     document.getElementById("result2").innerText = "Your score is 0. It is " + player1.playerName + "'s turn.";
     document.getElementById("totalScore2").innerText = "Your total score is " + player2.score;
   }
   else {
-    player2.currentScore = player2.currentScore + rolledScore;
-    document.getElementById("rolledScore").innerText = "You rolled " + rolledScore;
+    player2.currentScore = player2.currentScore + rolledScore2;
+    document.getElementById("rolledScore2").innerText = "You rolled " + rolledScore2;
     document.getElementById("score2").innerText = "Your current score is " + player2.currentScore ;
     let tempScore2 = player2.score + player2.currentScore;
     document.getElementById("totalScore2").innerText = "Your total score is " + tempScore2;
@@ -107,6 +107,7 @@ function player2Pass() {
   let player2 = playersList[1];
   clearFields();
   player2.score += player2.currentScore;
+  player2.currentScore = 0;
   document.getElementById("result2").innerText = "Your score is " + player2.score + ". It is " + player1.playerName + "'s turn.";
 }
 
