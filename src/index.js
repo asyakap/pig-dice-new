@@ -1,5 +1,5 @@
 
-import { startGame } from './pigdice.js';
+import { startGame } from './pigdice.js'
 import { player1Roll } from './pigdice.js';
 import { player1Pass } from './pigdice.js';
 import { player2Roll } from './pigdice.js';

@@ -1,6 +1,7 @@
 //Business Logic for Pig Dice
 
 export function Player(name) {
+
   this.playerName = name;
   this.score = 0;
   this.currentScore = 0;

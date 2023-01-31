@@ -1,6 +1,7 @@
 import { Player } from './../src/pigdice.js';
 import { getRandomInt } from './../src/pigdice.js';
 
+
 describe('Player', () => {
 
   test('should check for a new Player being created from constructor', () => {
@@ -21,5 +22,3 @@ describe('getRandomInt', () => {
     expect(number).toBeLessThan(7);
   });
 });
-
-
